@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "minegram",
+  "version": "1.0-SNAPSHOT",
+  "name": "MineGram",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/minegram/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.TheGoon.minegram.client.MinegramClient"
+    ],
+    "main": [
+      "org.TheGoon.minegram.Minegram"
+    ]
+  },
+  "mixins": [
+    "minegram.mixins.json",
+    {
+      "config": "minegram.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "fabric": "*",
+    "minecraft": "1.20"
+  }
+}
